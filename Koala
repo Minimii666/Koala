@@ -12,3 +12,17 @@
 <script src="script.js"></script>
 </body>
 </html>
+body {
+  margin: 0;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden;
+  cursor: none;
+}
+
+#koala {
+  position: absolute;
+  width: 90px;
+  pointer-events: auto;
+  transition: transform 0.2s ease;
+}

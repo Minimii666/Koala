@@ -26,3 +26,37 @@ body {
   pointer-events: auto;
   transition: transform 0.2s ease;
 }
+const koala = document.getElementById("koala");
+
+let mouseX = 0;
+let mouseY = 0;
+let koalaX = 100;
+let koalaY = 100;
+
+document.addEventListener("mousemove", e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function followMouse() {
+  koalaX += (mouseX - koalaX) * 0.1;
+  koalaY += (mouseY - koalaY) * 0.1;
+
+  koala.style.left = koalaX + "px";
+  koala.style.top  = koalaY + "px";
+
+  requestAnimationFrame(followMouse);
+}
+followMouse();
+
+const messages = [
+  "HEY! 🐨",
+  "Nicht klicken! 😱",
+  "Ich bin kein Button!",
+  "OK ich geh ja schon… 😭"
+];
+
+koala.addEventListener("click", () => {
+  alert(messages[Math.floor(Math.random() * messages.length)]);
+  koala.style.transform = "scale(0)";
+});

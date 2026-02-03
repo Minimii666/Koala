@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Koala Maskottchen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="koala.png" id="koala" alt="Koala">
+
+<script src="script.js"></script>
+</body>
+</html>
